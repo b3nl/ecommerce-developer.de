@@ -131,3 +131,5 @@ Scott Keck-Warren’s article is a passionate call to action for developers to e
 ## **2024 EOL** and Conclusion
 
 The December 2024 issue of *php[architect]* is a fitting close to a fantastic year for PHP. From foundational principles to modern tools and retrospectives, the magazine offers something for every developer. My thanks go out to the authors and the PHP community for their contributions and insights throughout the year. Here’s to an even more exciting 2025!
+
+**Buy here: https://www.phparch.com/magazine/2024/12/2024-12-time-for-php/**
