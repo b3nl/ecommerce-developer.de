@@ -114,7 +114,7 @@ export const SOCIALS: SocialObjects = [
     name: "GitLab",
     href: "https://www.linkedin.com/in/bjoern-simon-lange/",
     linkTitle: `${SITE.title} on GitLab`,
-    active: true,
+    active: false,
   },
   {
     name: "Reddit",
