@@ -20,8 +20,8 @@ featured: true
 ## Einleitung 📝
 
 Nachdem ich gestern über [SOLID aus dem PHP Arch](https://ecommerce-developer.de/december-2024-issue-of-php_architect/) geschrieben habe, bin ich auf ein [Posting über SOLID und Refactoring bei Never Code Alone](https://nevercodealone.de/de/php-refactoring-best-practice/solid-prinzipien-in-php-clean-code-refactoring) gestoßen. 💡  
-Ich dachte mir: *Mh, interessant.* Eine Chance, über mein Verhältnis zu Refactoring zu schreiben. Die Diskussion, wann 
-und wie viel refactored werden sollte, begleitet mich persönlich seit Anfang meines Berufslebens – und die gesamte Branche, seitdem sie eigentlich existiert. ⚙️
+Ich dachte mir: *Mh, interessant.* Eine Chance, über mein Verhältnis zu Refactoring zu schreiben. 
+Denn die Diskussion nämlich, wann und wie viel refactored werden sollte, begleitet mich persönlich seit Anfang meines Berufslebens – und die gesamte Branche, seitdem sie eigentlich existiert. ⚙️
 
 Ich bin Agentur-Kind durch und durch. Mindestens die Hälfte meiner Zeit verbringe ich mit meinen Teams bei der Umsetzung 
 von externen, zielgerichteten Anforderungen. 
@@ -32,7 +32,7 @@ _"Make It Work, Make It Right, Make It Fast."_ 🛠️
 Oder wie wir in der IT, frei nach Voltaire/Montesquieu, sagen: _"Perfect is the enemy of done."_ ✅
 
 Die Frage, welche Programmierung perfekt ist, ist schwerer zu beantworten als die Frage, ob die [Hand Gottes ein reguläres Tor war](https://de.wikipedia.org/wiki/Hand_Gottes_(Fußball)). ⚽  
-Die Frage, ob man mit Refactoring fertig ist, gehört genauso dazu. 
+Die Frage, ob man refactoren muss oder ob man mit Refactoring fertig ist, gehört genauso dazu. 
 Unzählige Projekte sind gescheitert, weil man nicht das Ende gefunden hat. 
 Bevor man fertig ist, erscheinen schon neue Sprachfeatures und Updates – und man müsste eigentlich *wieder* ran. 😅
 
@@ -147,7 +147,7 @@ OrderProcessor also normalerweise Interfaces "injecten" (und mit [Constructor pr
 
 NCA schreibt "_Neue Funktionen können hinzugefügt werden, ohne den bestehenden Code zu ändern._". Hinter [OCP](https://en.wikipedia.org/wiki/Open–closed_principle) steckt aber 
 ein bisschen mehr, nämlich z.B. auch die theoretische Überprüfung und Vorrausschau was sonst noch mit dem Quellcode passieren könnte.
-Und hier überspitze ich das Beispiel einmal mal, wobei die folgenden Use-Cases für eine Order durchaus realistisch sind: 
+Und hier überspitze ich das Beispiel mal, wobei die folgenden Use-Cases für eine Order durchaus realistisch sind: 
 
 1. Möchte ich auch das Total validieren, muss ich die Interna vom Processor für die Reihenfolge ändern. Das entspräche z.B. dem Shape Beispiel aus "PPP":
 
@@ -161,7 +161,7 @@ Und hier überspitze ich das Beispiel einmal mal, wobei die folgenden Use-Cases 
     die Adressdaten der Order korrekt sind. 
     Wo kommt diese Änderung nun hin? Für diesen Change muss ich vielleicht den Processor oder auch den Validator selbst 
     ändern, und damit verstoße ich dann gegen OCP. 
-    Und sollte ich den Validator selbst ändern und um weitere Verantwortungen ergänzen, dann verstoße ich auch plötzlich 
+    Und sollte ich den Validator selbst ändern und weitere Verantwortungen ergänzen, dann verstoße ich auch plötzlich 
     zusätzlich noch gegen das Single-responsibility principle (siehe unten).
 
     [Spryker](https://docs.spryker.com/docs/dg/dev/backend-development/plugins/plugins.html) hat für solche Themen an unterschiedlichsten Stellen z.B. 
@@ -195,9 +195,9 @@ Und hier überspitze ich das Beispiel einmal mal, wobei die folgenden Use-Cases 
 
 ### Single-responsibility principle (SRP)
 
-Auch wenn ich beim OCP das Thema [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle) schon angesprochen habe, ist mir beim prozeduralen Stil innerhalb der process-Methode 
-sofort eine Pipeline als Gegenbeispiel in den Sinn gekommen.
-Um z.B. ein einfaches [pipeline-Beispiel von thephpleague](https://github.com/thephpleague/pipeline) zu zitieren:
+Auch wenn ich beim OCP das Thema [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle) schon angesprochen 
+habe, ist mir beim prozeduralen Stil innerhalb der process-Methode sofort eine Pipeline als Gegenbeispiel in den Sinn gekommen.
+[thephpleague visualisiert eine einfache pipeline z.B. so ](https://github.com/thephpleague/pipeline):
 
 ```php
 $result = $payload;
@@ -217,10 +217,10 @@ Jeder Schritt vom Beispiel
        $this->repository->save($order, $total);
        $this->emailService->sendConfirmation($order);
 ```
-könnte z.B. eine Stage sein und dann hätte ich keine process-Methode die für mehrere Dinge verantwortlich ist. Ich hatte 
-mich beim NCA-Beispiel nämlich direkt an 
+könnte demnach eine Stage sein. Damit hätte ich dann keine process-Methode mehr, die für mehrere Dinge verantwortlich ist. 
+Ich hatte mich beim NCA-Beispiel nämlich direkt an 
 
-> The Employee class contains business rules and persistence  control. These two responsibilities should almost never be mixed. Business rules tend to change frequently, and  though persistence may not change as frequently, it changes for completely different reasons. Binding business  rules to the persistence subsystem is asking for trouble.
+> The Employee class contains business rules and persistence control. These two responsibilities should almost never be mixed. Business rules tend to change frequently, and  though persistence may not change as frequently, it changes for completely different reasons. Binding business  rules to the persistence subsystem is asking for trouble.
 >
 > -- <cite>Martin, Robert C.. Agile Software Development, Principles, Patterns, and Practices: Pearson New International Edition (English Edition) (S.98). Pearson Education. Kindle-Version.</cite>
 
@@ -228,9 +228,9 @@ erinnert gefühlt. Dieses Thema hätte man mit Stages dann durchaus geregelt.
 
 ## Conclusio
 
-Mit solch einer Stage pipeline hätten wir wahrscheinlich das Maximum des SRP erreicht. Aber wie oben schon geschrieben. 
-**Soll man sich diese Aufwand von Anfang an wirklich machen?**
-Ich sage nein. Erst wenn wirklich antizipierbar ist, dass es für die Anforderung eine technische Schuld sein könnte.
+Mit solch einer Stage pipeline hätten wir wahrscheinlich das Maximum des SRP erreicht. 
+Aber wie oben schon geschrieben: **Soll man sich diesen Aufwand von Anfang an wirklich machen?**
+Ich sage "nein". Erst wenn wirklich antizipierbar ist, dass es für die Anforderung eine technische Schuld sein könnte.
 
 Bleibt zu sagen: Ja, arbeitet clean. [Bleibt schuldenfrei](https://brainhub.eu/library/technical-debt-examples). 
 [Wiederholt Euch nicht (DRY)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) und [hinterlasst den Campingplatz sauberer, 
