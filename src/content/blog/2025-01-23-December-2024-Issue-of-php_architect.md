@@ -2,7 +2,7 @@
 slug: "december-2024-issue-of-php_architect"
 title: "Review of php[architect] December 2024"
 description: "An in-depth review of the latest issue of php[architect], highlighting key takeaways and recommendations for PHP developers."
-tags: ["php", "developers", "magazine review", "enums", "solid", "unit tests", "rector", "accessibility", "laravel", "security"]
+tags: ["php", "php[architect]", "developers", "magazine review", "enums", "solid", "unit tests", "rector", "accessibility", "laravel", "security"]
 featured: true
 pubDatetime: 2025-01-23T21:30:00Z
 ---

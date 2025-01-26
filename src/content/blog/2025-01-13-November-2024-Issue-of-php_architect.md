@@ -6,6 +6,7 @@ description: 'Die November-Ausgabe 2024 des php[architect]-Magazins bietet eine 
 pubDatetime: 2025-01-13T14:38:28+01:00
 tags:
   - php
+  - php[architect]
   - couchdb
   - serverless
   - development
