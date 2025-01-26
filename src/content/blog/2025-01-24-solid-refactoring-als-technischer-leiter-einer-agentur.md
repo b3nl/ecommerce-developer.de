@@ -1,4 +1,5 @@
 ---
+slug: "solid-refactoring-als-technischer-leiter-einer-agentur"
 title: "SOLID - Wie sehe ich Refactoring als technischer Leiter einer Agentur?"
 description: "Eine persönliche Betrachtung zu den SOLID-Prinzipien und Refactoring, mit Fokus auf pragmatische Entscheidungen und Best Practices."
 tags:
