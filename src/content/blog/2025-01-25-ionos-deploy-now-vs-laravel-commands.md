@@ -1,7 +1,7 @@
 ---
 slug: "ionos-deploy-now-vs-laravel-commands-and-php-exe"
 title: 'Wie PHP_BINARY mein Laravel IONOS Deploy Now Deployment gefixxt hat.'
-description: 'Lorem ipsum dolor sit amet'
+description: 'Ich stellte fest, dass meine Laravel-Cronjobs bei der Verwendung von IONOS Deploy Now nicht funktionierten. Die Ursache war, dass die Standard-PHP-Exe auf eine veraltete Version zeigte, die mit Laravel nicht kompatibel ist. Hier zeige ich meine Analyse und Behebung.'
 pubDatetime: 2022-07-08T00:00:00+02:00
 featured: true
 tags:
