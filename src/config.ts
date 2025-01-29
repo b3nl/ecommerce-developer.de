@@ -3,7 +3,13 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://ecommerce-developer.de/", // replace this with your deployed domain
   author: "Björn Lange",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
+  desc: "Ich bin der E-Commerce Developer und hier " +
+    "teile ich meine Gedanken, Erfahrungen und Einblicke aus der spannenden Welt " +
+    "des E-Commerce und der Softwareentwicklung. Als CTO führender " +
+    "Digitalagenturen habe ich über die Jahre viel gelernt – von agilen " +
+    "Prozessen und innovativen Technologien bis hin zu Teamführung und " +
+    "Unternehmenskultur. Dieser Blog ist meine Plattform, um diese Erkenntnisse mit " +
+    "Dir zu teilen und gemeinsam über die Zukunft unserer Branche nachzudenken.",
   title: "E-Commerce Developer",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
