@@ -1,5 +1,4 @@
 ---
-featured: true
 slug: 'november-2024-issue-of-php_architect'
 title: 'Reflections on the November 2024 Issue of php[architect]'
 description: 'Die November-Ausgabe 2024 des php[architect]-Magazins bietet eine vielfältige Sammlung von Artikeln, die sich an PHP-Entwickler aller Erfahrungsstufen richten. Themen wie CouchDBs dokumentenorientierte Flexibilität, serverlose Architekturen und die Entwicklung von PHP selbst werden behandelt. Die Ausgabe zielt darauf ab, Entwickler zu informieren und zu inspirieren, indem sie sowohl technische Einblicke als auch Reflexionen über die Verantwortung in Entwicklungsteams bietet.'
