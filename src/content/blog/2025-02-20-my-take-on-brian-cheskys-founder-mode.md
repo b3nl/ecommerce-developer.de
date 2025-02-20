@@ -1,9 +1,9 @@
 ---
 featured: true
 slug: 'my-take-on-brian-cheskys-founder-mode'
-title: '🧠✨ **My Take on Brian Chesky’s Founder Mode** ✨🧠'
+title: '🧠✨ My Take on Brian Chesky’s Founder Mode ✨🧠'
 description: 'In My Take on Brian Chesky’s Founder Mode, I share how Brian Chesky’s leadership philosophy emphasizes partnership over micromanagement, highlighting the importance of “Eyes on, hands off” leadership. I reflect on the value of setting clear expectations, leading by example, and maintaining authenticity—especially during challenging times like Covid-19—while advocating for clarity, collaboration, and a hands-on approach to effective leadership.'
-pubDatetime: 2025-02-20T14:38:28+01:00
+pubDatetime: 2025-02-20T21:38:28+01:00
 tags: ['Leadership', 'FounderMode', 'BrianChesky', 'SimonSinek', 'Airbnb','Management', 'Entrepreneurship', 'Clarity', 'AgileEnablement', 'B2BTechDay']
 ---
 
