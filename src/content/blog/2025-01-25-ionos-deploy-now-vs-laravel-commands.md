@@ -12,8 +12,6 @@ tags:
   - ionos  
 ---
 
-# Wie PHP_BINARY mein Laravel IONOS Deploy Now Deployment gefixxt hat.
-
 [Laravel](https://laravel.com) ist ein beeindruckendes Fullstack Framework, welches sich durch Performance, [gute Dokumentation](https://laravel.com/docs/11.x) 
 und Einfachheit aber auch durch Feature-Fülle auszeichnet. Dazu gehört für mich auch das elegante [Abstrahieren von Cronjobs](https://laravel.com/docs/11.x/scheduling).  
 

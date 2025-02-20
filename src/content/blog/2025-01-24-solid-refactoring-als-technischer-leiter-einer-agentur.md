@@ -15,8 +15,6 @@ pubDatetime: 2025-01-24T22:01:23+01:00
 featured: true
 ---
 
-# SOLID - Wie sehe ich Refactoring als technischer Leiter einer Agentur? 🚀
-
 ## Einleitung 📝
 
 Nachdem ich gestern über [SOLID aus dem PHP Arch](https://ecommerce-developer.de/december-2024-issue-of-php_architect/) geschrieben habe, bin ich auf ein [Posting über SOLID und Refactoring bei Never Code Alone](https://nevercodealone.de/de/php-refactoring-best-practice/solid-prinzipien-in-php-clean-code-refactoring) gestoßen. 💡  
