@@ -10,19 +10,15 @@ tags:
   - laravel
 ---
 
-Laravel Migrations
-------------------
-
+## Laravel Migrations
 
 Ich stehe ja tierisch auf die [Datenbank-Migrationen von Laravel](http://laravel.com/docs/5.0/migrations "Laravel Migrations"). Ein PHP-Prozess der durch einen Ordner iteriert und weiß, welchen Dateien er schon importiert hat und welche nicht. Damit aber nicht genug: Mit dabei kommt eine Konsolen-Anwendung, die uns im Release-Fall bei Migrationen unterstützt und Migrationen auch wieder resetten kann.  So mag ich das. Der Prozess ist robust und an Feinheiten wie eine konfliktfreie Namenskonvention oder an eine Boilerplatte zur Klassenerstellung wurde auch gedacht.
-Shopware Migrations
--------------------
 
+## Shopware Migrations
 
 Einen ähnlichen Prozess finden wir auch im "internen" Entwickler-Deployment von Shopware. Die *build/ApplyDeltas.php* durchläuft den Ordner *\_sql/migrations* und wendet alle gefundenen Migrations auf die Datenbank an. Die Reihenfolge wird von dem numerischen Präfix im Dateinamen der jeweiligen Klasse bestimmt, wie z.B. "[101-add-extended-editor-field.php](https://github.com/shopware/shopware/blob/v5.0.0-RC3/_sql/migrations/101-add-extended-editor-field.php "Migration bei Github")". Dieses Präfix wird dann wiederum auch als ID in der Datenbank-Tabelle *s\_schema\_version*gespeichert, welche als "Historie" der Migrationen dient.
-"Probleme" und Lösung
----------------------
 
+## "Probleme" und Lösung
 
 Gerne würde ich diesen Mechanismus auch für meine eigenen Datenbank-Deployments verwenden, aber leider "traue" ich mich das nicht. ;) Ja, Shopware fängt zwar erst bei ID 101 an, aber trotzdem kann ich nicht 100%-konfliktsicher eine eigene Migration-Klasse  mit entsprechender ID einfügen, da ich nicht weiß, ob diese von Shopware selbst belegt wird. (Hier hätte ich mir eine flexiblere Namenskonvention gewünscht) Einen eigenen Ordner und entsprechende Datenbank-Historie kann ich aber leider beim *Shopware\Components\Migrations\Manager* auch nicht angeben.
 
