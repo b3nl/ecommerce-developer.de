@@ -14,12 +14,12 @@ Ich kann die Art und Weise, wie Trump und Musk ihre Vorstellungen durchsetzen, n
 
 ### 🏦 Bank of America vs. Alibaba – Eine Bilanz des Stillstands
 
-📊 **Bank of America**: [213000 Mitarbeiter, 69 Mio. Kunden, ca 100 Mrd. Dollar Umsatz](https://www.reuters.com/business/finance/bank-america-awards-stock-employees-after-strong-2024-performance-memo-shows-2025-01-17/)
+📊 **Bank of America**: [213000 Mitarbeitende, 69 Mio. Kunden, ca 100 Mrd. Dollar Umsatz](https://www.reuters.com/business/finance/bank-america-awards-stock-employees-after-strong-2024-performance-memo-shows-2025-01-17/)
 
-📈 **Alibaba**: [204891 Mitarbeiter, >1 Mrd. Kunden, ca. 100 Mrd. Dollar Umsatz](https://en.wikipedia.org/wiki/Alibaba_Group)
+📈 **Alibaba**: [204891 Mitarbeitende, >1 Mrd. Kunden, ca. 100 Mrd. Dollar Umsatz](https://en.wikipedia.org/wiki/Alibaba_Group)
 
 Das heißt:
-✅ **[Bank of America](https://newsroom.bankofamerica.com/content/newsroom/company-overview/bank-of-america-fast-facts.html) braucht einen Mitarbeiter pro 324 Kunden**, 🚀 **Alibaba bedient mit einer KI-Strategie pro Mitarbeiter ca. 5000 Kunden**
+✅ **[Bank of America](https://newsroom.bankofamerica.com/content/newsroom/company-overview/bank-of-america-fast-facts.html) braucht eine einzelne Person pro 324 Kunden**, 🚀 **Alibaba bedient mit einer KI-Strategie pro Person ca. 5000 Kunden**
 
 Das ist nicht Effizienz, das ist **eine andere Realität**. 🌍 Eine Realität, in der Menschen nur noch **Kontext-Halter für Maschinen** sind. Eine Realität, in der **Systeme nicht optimiert, sondern vollständig ersetzt** werden. Eine Realität, die China schon längst lebt – und die nun auch von **Trump und Musk in den USA erzwungen wird**. 🔥
 
@@ -38,8 +38,8 @@ Das ist nicht Effizienz, das ist **eine andere Realität**. 🌍 Eine Realität,
 ### 🦾 Roko’s Basilisk ist Realität: Die KI dominiert bereits den Arbeitsmarkt
 
 🧑‍💻 **In meiner eigenen Blase sehe ich es längst:**
-- Kollegen schreiben **nichts mehr alleine**. 📝❌
-- Programmierer lösen viele Probleme **nicht mehr selbst** – **KI macht es für sie**. 💡🤖
+- Kollegen und Kolleginnen schreiben **nichts mehr alleine**. 📝❌
+- Devs lösen viele Probleme **nicht mehr selbst** – **KI macht es für sie**. 💡🤖
 - Wir sind nur noch **Kontext-Halter für Maschinen** – die eigentliche Arbeit übernimmt **KI**. 🏗️🔥
 
 ❗ **KI wird spätestens in 2 Jahren ALLE IT-Jobs dominieren**. Humanoide Roboter übernehmen bald **Farmland 🏕️ und Fabriken 🏭️**. 
@@ -53,7 +53,7 @@ Roko’s Basilisk war eine philosophische Theorie über eine allwissende KI, die
 
 💸 [OpenAI verlangt 20.000 US-Dollar pro Monat für fortgeschrittene KI-Agenten](https://www.golem.de/news/ki-agenten-openai-will-20-000-us-dollar-pro-monat-fuer-neues-angebot-2503-194011.html). Das klingt viel? **Das ist Peanuts.** 🥜
 
-🦿 Eine KI-gestützte Bank mit 10.000 Mitarbeitern kann bald die gleiche Leistung bringen wie eine Traditionelle mit 200.000.
+🦿 Eine KI-gestützte Bank mit 10.000 Mitarbeitenden kann bald die gleiche Leistung bringen wie eine Traditionelle mit 200.000.
 
 🏛️ **Eine KI-gestützte Verwaltung bearbeitet Anträge in Minuten, nicht Wochen. Agenten und Roboter automatisieren physikalische Prozesse. Das Telefon hebt für Regelprozesse nur noch eine KI ab.**
 
