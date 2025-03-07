@@ -5,7 +5,7 @@ slug: "rokos-basilisk-ai-revolution"
 title: "🤖 Roko’s Basilisk schlägt zu: Warum uns der autokratische KI-Wandel jetzt schon einholt"
 description: "Wie KI, Trump und Musk den systemischen Wandel mit brutaler Geschwindigkeit erzwingen – und warum der Westen jetzt radikal automatisieren muss, um nicht den Anschluss zu verlieren."
 tags: ["KI", "Automation", "Trump", "Musk", "China Speed", "Wirtschaft", "Systemwechsel", "Roko’s Basilisk", "Digitalisierung", "Disruption"]
-pubDatetime: 2025-03-07T09:55:00Z
+pubDatetime: 2025-03-07T08:55:00Z
 ---
 
 Ein systemischer Berater sagte kürzlich zu mir: "Menschen zu ändern ist übergriffig, man muss Systeme ändern." Und genau das passiert gerade – nicht durch langsame Evolution, sondern durch brutale Disruption. 🚀 KI ersetzt keine Menschen – sie ersetzt Systeme. Und wer nicht mitzieht, wird zurückgelassen. ⏳
