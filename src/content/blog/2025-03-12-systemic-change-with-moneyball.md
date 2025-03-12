@@ -2,7 +2,7 @@
 draft: false
 featured: true
 slug: "systemic-change-with-moneyball"
-title: "🎬 Die Kunst zu gewinnen – Was wir aus *Moneyball* über systemische Veränderung lernen können"
+title: "Die Kunst zu gewinnen – Was wir aus Moneyball über systemische Veränderung lernen können"
 description: "Wie Billy Beane das Baseball-Spiel revolutionierte, indem er das System statt der Menschen änderte – und welche Lektionen Unternehmen, Teams und Einzelpersonen daraus ziehen können."
 tags: ["Moneyball", "Systemische Veränderung", "Lean Startup", "Datengetriebene Entscheidungen", "Vanity Metrics", "Wirtschaft", "Innovation", "Leadership", "Disruption", "Baseball", "systems thinking", "systemic change", "data driven", "eric ries"]
 pubDatetime: 2025-03-12T08:55:00Z
