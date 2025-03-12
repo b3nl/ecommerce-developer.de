@@ -4,7 +4,7 @@ featured: true
 slug: "rokos-basilisk-ai-revolution"
 title: "🤖 Roko’s Basilisk schlägt zu: Warum uns der autokratische KI-Wandel jetzt schon einholt"
 description: "Wie KI, Trump und Musk den systemischen Wandel mit brutaler Geschwindigkeit erzwingen – und warum der Westen jetzt radikal automatisieren muss, um nicht den Anschluss zu verlieren."
-tags: ["KI", "Automation", "Trump", "Musk", "China Speed", "Wirtschaft", "Systemwechsel", "Roko’s Basilisk", "Digitalisierung", "Disruption"]
+tags: ["KI", "AI, "Automation", "Trump", "Musk", "China Speed", "Wirtschaft", "Systemwechsel", "Roko’s Basilisk", "Digitalisierung", "Disruption", "systems thinking", "systemic change"]
 pubDatetime: 2025-03-07T08:55:00Z
 ---
 
