@@ -1,7 +1,4 @@
 ---
-featured: true
-
-
 title: "🚀 Review of php[architect] January 2025"
 description: "An in-depth review of the january 2025 issue of php[architect], highlighting key takeaways and recommendations for PHP developers."
 tags: ["php", "developers", "magazine review", "php[architect]", "quality gates", "legacy upgrades", "mysql protocol", "accessibility", "security", "books", "phpstan", "rector", "broken window theory"]

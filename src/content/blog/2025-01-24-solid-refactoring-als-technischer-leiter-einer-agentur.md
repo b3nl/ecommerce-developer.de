@@ -12,7 +12,6 @@ tags:
   - Agentur
   - Spryker
 pubDatetime: 2025-01-24T22:01:23+01:00
-featured: true
 ---
 
 ## Einleitung 📝
