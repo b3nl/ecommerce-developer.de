@@ -1,5 +1,7 @@
 ---
+draft: false
 featured: true
+slug: 'the-marvel-method'
 title: "Was mir die Marvel-Methode über agile Umsetzung beigebracht hat"
 description: "Ein Blick auf Stan Lees revolutionäre Comic-Erzähltechnik – und was Teams, Agenturen und Entwickler:innen heute davon lernen können."
 tags: ["Agile", "Marvel", "Projektmanagement", "Comics", "Stan Lee", "Kreativprozesse", "Selbstorganisation", "Flow", "Teamführung", "Lean", "Superhelden", "Produktentwicklung"]
@@ -65,7 +67,7 @@ Ob in der Softwareentwicklung, im Agenturgeschäft oder in der Führung: Wir bra
 - ✅ Ergebnisorientierung statt Planungswut.
 - ✅ Handlung als Basis für Erkenntnis – nicht umgekehrt.
 
-> “Plans are only good intentions unless they immediately degenerate into hard work.”  
+> Plans are only good intentions unless they immediately degenerate into hard work.  
 > – *Peter Drucker*
 
 Oder wie Stan Lee gesagt haben könnte 😅:  
