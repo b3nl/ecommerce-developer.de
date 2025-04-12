@@ -1,5 +1,6 @@
 ---
-draft: true
+draft: false
+featured: true
 title: Claude Code, der sehr schnelle Junior im Team
 pubDatetime: 2025-04-11T14:00:00+01:00
 tags:
@@ -8,37 +9,32 @@ tags:
   - KI
   - Unit Testing
   - PHP
+  - Vibe Coding
 description: Eine kurze Betrachtung zu den Stärken und Schwächen von Claude Code im Pairprogramming bei der Erstellung von Unit Tests
 ---
 
-Regelmäßig teste ich, wie sich die Top LLM/Gen AI Chatbots und Agenten mit meinen üblichen Dev-Aufgaben herumschlagen. 
-Es wird jedes Mal besser.
-Sie sind aber immer noch der Junior im Pair Programming, und Human-before-the-loop und Human-after-loop werden benötigt. [Vibe Coding](https://de.wikipedia.org/wiki/Vibe_Coding) mag zwar bereits bei Googlebarem Code auf der grünen Wiese funktionieren, große Projekte mit "unbekannten Problemen" leben von der Finesse ihrer menschlichen Begleiter.
+[Claude Code](https://docs.anthropic.com/de/docs/agents-and-tools/claude-code/overview) ist wie ein Praktikant, der nie schläft, nie jammert – und trotzdem immer wieder vergisst, wie unser Framework funktioniert.
 
-Mal ein aktuelles Beispiel, und das ist ein Einfaches: Erzeugen von Unittests im Spryker-Kontext für extrem einfache Klassen: 
+Ich teste regelmäßig, wie sich die Top LLMs und Agenten mit meinen typischen Dev-Aufgaben schlagen. Und ja, sie werden besser. Spürbar besser.
 
-Um _Claude Code_ zu installieren, kann man das Tool mit dem folgenden NPM-Befehl global installieren:
+Aber sie sind immer noch: der Junior im Pair Programming.
 
+**[Vibe Coding](https://de.wikipedia.org/wiki/Vibe_Coding)** mag bei (einfachen) Aufgaben auf der grünen Wiese schon funktionieren. Doch komplexe Software-Projekte mit "unbekannten Problemen" leben von der Finesse ihrer menschlichen Begleiter – sowohl im Guten, als auch im Schlechten.
+
+Ein aktuelles Beispiel: **Das Erzeugen von Unit Tests im Spryker-Kontext für extrem einfache Klassen.**
+
+Zur Installation von Claude Code:
 ```shell
-npm install -g @anthropic-ai/claude-code
+$ npm install -g @anthropic-ai/claude-code
 ```
+Danach kann man Claude Code mit `claude` im Projektordner starten. Ich empfehle, ein dediziertes Memory-File wie `Claude.md` anzulegen, um die Kommunikation mit dem Tool zu verbessern.
 
-Nach der Installation kann man Claude Code mit `claude` innerhalb des jeweiligen Projektordners im Terminal starten. Mit der Option `--help` erhält man eine Übersicht aller verfügbaren Befehle. Ich empfehle das Erzeugen und Verfeinern vom Claude Memory z.B. in der Claude.md.
+Das Versprechen:
+> Claude Code ist ein agentisches Coding-Tool, das in Ihrem Terminal lebt, Ihre Codebasis versteht und Ihnen hilft, durch natürlichsprachliche Befehle schneller zu programmieren. [...] Bearbeiten von Dateien, Ausführen und Beheben von Tests, Lösen von Merge-Konflikten u.v.m.
 
-Und das Versprechen von Claude Code ist folgendes:
+So weit, so gut.
 
-> Claude Code ist ein agentisches Coding-Tool, das in Ihrem Terminal lebt, Ihre Codebasis versteht und Ihnen hilft, durch natürlichsprachliche Befehle schneller zu programmieren. Durch die direkte Integration in Ihre Entwicklungsumgebung optimiert Claude Code Ihren Workflow, ohne zusätzliche Server oder komplexe Einrichtung zu erfordern.
->
-> Die wichtigsten Fähigkeiten von Claude Code sind:
->
-> - Bearbeiten von Dateien und Beheben von Bugs in Ihrer Codebasis
-> - Beantworten von Fragen zur Architektur und Logik Ihres Codes
-> - Ausführen und Beheben von Tests, Linting und anderen Befehlen
-> - Durchsuchen der Git-Historie, Lösen von Merge-Konflikten und Erstellen von Commits und PRs
->
-> <cite>https://docs.anthropic.com/de/docs/agents-and-tools/claude-code/overview</cite>
-
-Also einfache Anweisung um diese simple Klasse mit einem Unit Test zu versehen:
+Also, zum Beispiel:
 
 ```php
 class ArticleListener extends AbstractPlugin implements EventBulkHandlerInterface
@@ -51,61 +47,47 @@ class ArticleListener extends AbstractPlugin implements EventBulkHandlerInterfac
 }
 ```
 
-Aber nein, daraus wird kein wirklich korrekter Unit-Test, auch wenn der erste Versuch funktioniert.
-
-Unter anderem startet mir Claude den Unit-Test im Setup wie folgt:
-
+Claude erzeugt einen Test, der auf den ersten Blick funktioniert, aber unter der Haube falsche Annahmen trifft. Beispiel:
 ```php
 $this->articleListenerMock = $this->getMockBuilder(ArticleListener::class)
     ->setMethods(['getFacade'])
      ->getMock();
                
- $this->articleListenerMock->method('getFacade')
+$this->articleListenerMock->method('getFacade')
     ->willReturn($this->facadeMock);
 ```
 
-Ne, ne Claude. Ich möchte nicht gegen einen Mock testen.
+Ne, Claude. Ich will nicht gegen ein Mock meiner zu testenden Klasse testen. Die Parent-Klasse stellt via `setFacade` eine API bereit, um genau diesen Fall sauber zu lösen. Leider erkennt Claude die Logik ohne genauere Erklärung nicht – obwohl es Teil der Vererbungshierarchie in der nativen Sprachsyntax ist.
 
-Aber Björn, werdet Ihr Euch fragen, was ist das Problem?
-
-_AbstractPlugin_ benutzt das "_FacadeResolverAwareTrait_" von Spryker und das bietet mir eine Möglichkeit über eine dedizierte API die Fassade zu bestimmen. 
-
-Claude versteht also entgegen des eigenen Versprechens so wenig vom Kontext, dass es nicht weiß, dass die Parent-Klasse die API bereitstellt, die es gerade über "Monkey Patching" per Mock bereitstellen möchte, obwohl es grundlegende Teile der Sprachsyntax sind.
-
-Gut, also Prompt zum Beheben:
-
+Also prompten wir nach:
 > Please don't use the listeners as a mock. You can inject the facade mock with the setter "setFacade". Save this to memory!
 
-Und was macht Claude daraus? Funktionierenden Quatsch:
-
+Antwort:
 ```php
-$this->facadeMock = $this->createMock(FacadeInterface::class);
-$this->articleListener = new ArticleListener();
-
 $reflection = new \ReflectionClass($this->articleListener);
 $facadeProperty = $reflection->getParentClass()->getProperty('facade');
 $facadeProperty->setAccessible(true);
 $facadeProperty->setValue($this->articleListener, $this->facadeMock);
 ```
 
-OK, dann nächster Versuch:
+Immer noch nicht. Und passt eigentlich gar nicht zum Prompt. Nächster Versuch:
+> No, use the setFacade-Setter to inject the facade mock into the listener.
 
-> No, use the setFacade-Setter to inject the facade mock into the listener. 
+Und dann:
 
 ```php
 $this->facadeMock = $this->createMock(FacadeInterface::class);
-
 $this->articleListener = new ArticleListener();
 $this->articleListener->setFacade($this->facadeMock);
 ```
 
-WOHO, das sieht gut und richtig aus!
+WOHOooo, das sieht gut und richtig aus! Testet man das:
 
 ```shell
-[TypeError] Spryker\Zed\Kernel\Communication\AbstractPlugin::setFacade(): Argument #1 ($facade) must be of type Spryker\Zed\Kernel\Business\AbstractFacade, Mock_FacadeInterface_f000f07c given, called in /data/tests/PyzTest/Zed/Log/Communication/Plugin/Event/Listener/ArticleListenerTest.php on line 50
+[TypeError] AbstractPlugin::setFacade(): Argument #1 must be of type AbstractFacade, Mock_FacadeInterface_... given
 ```
 
-Gut, auf zum nächsten Fehler. In dem Fall folge ich dem "Vibe Coding"-Dogma und gebe der KI einfach nur den Fehler zum Selbstfixen, und siehe da, ein funktionierender Fix:
+Gut, auf zum nächsten Prompt. In dem Fall folge ich dem "Vibe Coding"-Dogma und gebe der KI einfach nur den Fehler, und siehe da, ein funktionierender Fix:
 
 ```php
 $this->facadeMock = $this->getMockBuilder(Facade::class)
@@ -116,7 +98,7 @@ $this->articleListener = new ArticleListener();
 $this->articleListener->setFacade($this->facadeMock);
 ```
 
-Und in der "Vier-Augen-Kontrolle" des menschlichen Devs müsste nun auffallen, dass der korrekte Aufruf eigentlich der Folgende wäre:
+Aber erst mit dem finalen Prompt wird der richtige Quellcode erzeugt, den ein geübter Dev viel früher umgesetzt hätte:
 
 ```php
 $this->facadeMock = $this->createMock(Facade::class);
@@ -125,11 +107,23 @@ $this->articleListener = new ArticleListener();
 $this->articleListener->setFacade($this->facadeMock);
 ```
 
-Und damit laufen die Unit-Tests dann durch.
+Und das ist dann korrekt. Menschliche Kontrolle bleibt aber Pflicht.
 
-Für heute bin ich erstmal beruhigt. Eine der besten Coding KIs versteht immer noch nicht wirklich was sie tut, und geübte Menschen sind besser und schneller. Das Tempo aber mit dem KI aufholt und besonders schnell Boilerplate erzeugen kann ist rasant!
+Was hier passiert, ist kein Einzelfall. Claude ist schnell, fleißig, oft hilfreich – aber er erkennt nicht den Sinn hinter dem Code. Er spielt bekannte Lösungsmuster zurück, die auf meinen Inhalt angewendet werden, ohne wirklich zu „verstehen“, was dies konkret im Kontext bedeutet. Es geht nicht um Logik, sondern um Textmuster.
 
-Claude Code ist definitiv ein nützliches Tool für viele Entwicklungsaufgaben, aber es zeigt sich, dass es bei spezifischen Framework-Kontexten und komplexeren Anwendungsfällen noch Schwächen hat. Die Kombination aus menschlicher Expertise und KI-Unterstützung bleibt vorerst der effektivste Weg, um qualitativ hochwertigen Code zu produzieren.
+Im Video ["New Research Reveals How AI 'Thinks' (It Doesn’t)"](https://www.youtube.com/watch?v=-wzOetb-D3w) von **Sabine Hossenfelder** wird eine neue Studie von **Anthropic** vorgestellt. Dort wird untersucht, wie Claude intern arbeitet. Das Ergebnis:
 
-Als erfahrener Entwickler sollte man Claude Code als hilfreichen Junior im Team betrachten, der grundlegende Aufgaben übernehmen kann, aber dessen Arbeit man überprüfen sollte – besonders wenn es um komplexe Frameworks wie Spryker geht, die viele Konventionen und Besonderheiten aufweisen.
+- Claude aktiviert beim Rechnen keine Rechenlogik, sondern statistische Muster. Die Antwort *"36 + 59 = 95"* entsteht durch Heuristiken, nicht durch echtes Addieren.
+- Wird nach dem Rechenweg gefragt, liefert Claude eine plausible, aber konstruierte Erklärung – unabhängig vom internen Prozess.
+- Auch Jailbreaks funktionieren, weil Claude Zeichenfolgen erkennt und kombiniert, nicht weil er semantische Bedeutung versteht.
+
+Claude „denkt“ nicht – er **reagiert auf Wahrscheinlichkeiten**. So wie im Unit-Test-Beispiel, wo Claude kein Verständnis für das Zusammenspiel aus Vererbung, Trait und Methodennamen hat, sondern lediglich wiederholt, was statistisch aus den Trainingsdaten am Besten zum Kontext passt.
+
+📌 Claude ist ein Tool. Kein Kollege. Noch nicht.  
+⚠️ Er hilft, aber nur unter Aufsicht.  
+✅ Und er zwingt uns, genauer zu erklären, was wir wollen – und was nicht.
+
+Ich glaube daran, dass die **technologische Singularität** kommt. Vielleicht früher, als viele denken. Aber heute? Heute braucht Claude noch uns.
+
+Also: Kontrolliert die Tools. Denkt mit. Bleibt menschlich.
 
