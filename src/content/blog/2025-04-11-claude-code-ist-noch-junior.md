@@ -10,6 +10,9 @@ tags:
   - Unit Testing
   - PHP
   - Vibe Coding
+  - claude
+  - gen ai
+  - chat gpt
 description: Eine kurze Betrachtung zu den Stärken und Schwächen von Claude Code im Pairprogramming bei der Erstellung von Unit Tests
 ---
 
