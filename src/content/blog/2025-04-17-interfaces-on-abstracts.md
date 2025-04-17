@@ -67,7 +67,7 @@ class TurtleDove extends AbstractAnimal {
 } 
 ```
 
-"Leider" ist es mittlerweile so normal geworden, dass die PHP-Dokumentation dieses Thema auch nicht mehr wirklich aktiv andeutet, [außer in Beispiel 7 der Interfaces 😉](https://www.php.net/manual/en/language.oop5.interfaces.php#language.oop5.interfaces.examples.ex5) 
+"Leider" ist das mittlerweile so normal, dass die PHP-Dokumentation dieses Thema noch nicht mal mehr wirklich aktiv anzeigt, [außer in Beispiel 7 der Interfaces 😉](https://www.php.net/manual/en/language.oop5.interfaces.php#language.oop5.interfaces.examples.ex5) 
 
 ## 🤔 Also, warum sollte man Interfaces auf abstrakte Klassen anwenden?
 
@@ -75,13 +75,13 @@ class TurtleDove extends AbstractAnimal {
 
 > Duplication is the primary enemy of a well-designed system. It represents additional work, additional risk, and additional unnecessary complexity.
 >
-> - <cite>- C., Martin Robert. Clean Code: A Handbook of Agile Software Craftsmanship (Robert C. Martin Series) (English Edition) (p. 366). (Function). Kindle Edition.</cite>
+> <cite>- C., Martin Robert. Clean Code: A Handbook of Agile Software Craftsmanship (Robert C. Martin Series) (English Edition) (p. 366). (Function). Kindle Edition.</cite>
 
 Onkel Bob geht sogar so weit, es als die Wurzel allen Übels zu bezeichnen. Und ich kenne viele Entwickler, die dies als eines der größten Probleme in Teams ansehen.
 
 > Duplication may be the root of all evil in software.
 > 
-> - <cite>- C., Martin Robert. Clean Code: A Handbook of Agile Software Craftsmanship (Robert C. Martin Series) (English Edition) (p. 136). (Function). Kindle Edition.</cite>
+> <cite>- C., Martin Robert. Clean Code: A Handbook of Agile Software Craftsmanship (Robert C. Martin Series) (English Edition) (p. 136). (Function). Kindle Edition.</cite>
 
 
 Es lohnt sich also, auch nur ein paar Zeilen Code zu refaktorisieren.
