@@ -1,14 +1,14 @@
 ---
 slug: "december-2024-issue-of-php_architect"
-title: "Review of php[architect] December 2024"
-description: "An in-depth review of the latest issue of php[architect], highlighting key takeaways and recommendations for PHP developers."
-tags: ["php", "php[architect]", "developers", "magazine review", "enums", "solid", "unit tests", "rector", "accessibility", "laravel", "security"]
+title: "Review of PHP Architect December 2024"
+description: "An in-depth review of the latest issue of PHP Architect, highlighting key takeaways and recommendations for PHP developers."
+tags: ["php", "PHP Architect", "developers", "magazine review", "enums", "solid", "unit tests", "rector", "accessibility", "laravel", "security"]
 pubDatetime: 2025-01-23T21:30:00Z
 ---
 
 ## Introduction
 
-As 2024 comes to a close, the December issue of *php[architect]* serves as both a reflection of the past year and a valuable resource for PHP developers. Packed with articles ranging from fundamental principles to modern tools, this issue demonstrates why PHP remains one of the most vibrant and innovative developer communities. Below, I provide my take on the standout articles, highlighting their key messages, relevance, and how they resonate with my own experiences.
+As 2024 comes to a close, the December issue of *PHP Architect* serves as both a reflection of the past year and a valuable resource for PHP developers. Packed with articles ranging from fundamental principles to modern tools, this issue demonstrates why PHP remains one of the most vibrant and innovative developer communities. Below, I provide my take on the standout articles, highlighting their key messages, relevance, and how they resonate with my own experiences.
 
 ---
 
@@ -128,6 +128,6 @@ Scott Keck-Warren’s article is a passionate call to action for developers to e
 
 ## **2024 EOL** and Conclusion
 
-The December 2024 issue of *php[architect]* is a fitting close to a fantastic year for PHP. From foundational principles to modern tools and retrospectives, the magazine offers something for every developer. My thanks go out to the authors and the PHP community for their contributions and insights throughout the year. Here’s to an even more exciting 2025!
+The December 2024 issue of *PHP Architect* is a fitting close to a fantastic year for PHP. From foundational principles to modern tools and retrospectives, the magazine offers something for every developer. My thanks go out to the authors and the PHP community for their contributions and insights throughout the year. Here’s to an even more exciting 2025!
 
 **Buy here: https://www.phparch.com/magazine/2024/12/2024-12-time-for-php/**

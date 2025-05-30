@@ -1,7 +1,7 @@
 ---
-title: "🚀 Review of php[architect] January 2025"
-description: "An in-depth review of the january 2025 issue of php[architect], highlighting key takeaways and recommendations for PHP developers."
-tags: ["php", "developers", "magazine review", "php[architect]", "quality gates", "legacy upgrades", "mysql protocol", "accessibility", "security", "books", "phpstan", "rector", "broken window theory"]
+title: "🚀 Review of PHP Architect January 2025"
+description: "An in-depth review of the january 2025 issue of PHP Architect, highlighting key takeaways and recommendations for PHP developers."
+tags: ["php", "developers", "magazine review", "PHP Architect", "quality gates", "legacy upgrades", "mysql protocol", "accessibility", "security", "books", "phpstan", "rector", "broken window theory"]
 pubDatetime: 2025-02-24T12:00:00Z
 ---
 
@@ -157,4 +157,4 @@ Oscar Merida's insights into PHPStan were enlightening. His assertion that “st
 
 ## 🎯 Conclusion
 
-The January 2025 issue of php[architect] is packed with actionable insights and inspiration. From maintaining high-quality codebases to ensuring inclusivity and security, the magazine continues to be a valuable resource for PHP developers. If you haven't read it yet, grab your copy and start implementing these ideas into your work!
+The January 2025 issue of PHP Architect is packed with actionable insights and inspiration. From maintaining high-quality codebases to ensuring inclusivity and security, the magazine continues to be a valuable resource for PHP developers. If you haven't read it yet, grab your copy and start implementing these ideas into your work!

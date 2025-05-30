@@ -1,18 +1,18 @@
 ---
 slug: 'november-2024-issue-of-php_architect'
-title: 'Reflections on the November 2024 Issue of php[architect]'
-description: 'Die November-Ausgabe 2024 des php[architect]-Magazins bietet eine vielfältige Sammlung von Artikeln, die sich an PHP-Entwickler aller Erfahrungsstufen richten. Themen wie CouchDBs dokumentenorientierte Flexibilität, serverlose Architekturen und die Entwicklung von PHP selbst werden behandelt. Die Ausgabe zielt darauf ab, Entwickler zu informieren und zu inspirieren, indem sie sowohl technische Einblicke als auch Reflexionen über die Verantwortung in Entwicklungsteams bietet.'
+title: 'Reflections on the November 2024 Issue of PHP Architect'
+description: 'Die November-Ausgabe 2024 des PHP Architect-Magazins bietet eine vielfältige Sammlung von Artikeln, die sich an PHP-Entwickler aller Erfahrungsstufen richten. Themen wie CouchDBs dokumentenorientierte Flexibilität, serverlose Architekturen und die Entwicklung von PHP selbst werden behandelt. Die Ausgabe zielt darauf ab, Entwickler zu informieren und zu inspirieren, indem sie sowohl technische Einblicke als auch Reflexionen über die Verantwortung in Entwicklungsteams bietet.'
 pubDatetime: 2025-01-13T14:38:28+01:00
 tags:
   - php
-  - php[architect]
+  - PHP Architect
   - couchdb
   - serverless
   - development
 ---
 
 ## Introduction
-The November 2024 issue of *php[architect]* offers a diverse collection of articles that cater to every PHP developer, from beginners exploring serverless architectures to seasoned professionals reflecting on the evolution of PHP itself. With topics ranging from CouchDB’s document-oriented flexibility to fostering responsibility in development teams, this issue not only educates but inspires.
+The November 2024 issue of *PHP Architect* offers a diverse collection of articles that cater to every PHP developer, from beginners exploring serverless architectures to seasoned professionals reflecting on the evolution of PHP itself. With topics ranging from CouchDB’s document-oriented flexibility to fostering responsibility in development teams, this issue not only educates but inspires.
 
 As I delved into each article, I found myself reflecting on how these concepts apply to my own work and the broader PHP community. Here are my thoughts and key takeaways from this impressive lineup.
 
@@ -71,7 +71,7 @@ This powerful statement reminds us of the **critical need for timely updates** a
 ---
 
 ## Conclusion
-This issue of *php[architect]* highlights the vastness of the PHP ecosystem and the evolving challenges and opportunities it presents. From exploring the roots of PHP to diving into cutting-edge tools like CouchDB and serverless platforms, the content reinforces the importance of continual learning and adaptability in our field.
+This issue of *PHP Architect* highlights the vastness of the PHP ecosystem and the evolving challenges and opportunities it presents. From exploring the roots of PHP to diving into cutting-edge tools like CouchDB and serverless platforms, the content reinforces the importance of continual learning and adaptability in our field.
 
 The unifying theme that stood out to me was **growth**—whether it's technical growth through new tools and techniques or personal growth through accountability and responsibility. As PHP developers, we have the privilege of shaping the digital world, and with that comes the responsibility to do so thoughtfully.
 

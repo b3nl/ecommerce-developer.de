@@ -1,12 +1,12 @@
 ---
 featured: true
-title: "Review of php[architect] February 2025"
-description: "An in-depth review of the latest issue of php[architect], highlighting key takeaways and recommendations for PHP developers."
-tags: ["php", "developers", "magazine review", "php[architect]", "Docker", "DDev", "Lando", "Observability", "CMS", "Laravel", "LLM", "OpenTelemetry", "AI", "spotify"]
+title: "Review of PHP Architect February 2025"
+description: "An in-depth review of the latest issue of PHP Architect, highlighting key takeaways and recommendations for PHP developers."
+tags: ["php", "developers", "magazine review", "PHP Architect", "Docker", "DDev", "Lando", "Observability", "CMS", "Laravel", "LLM", "OpenTelemetry", "AI", "spotify"]
 pubDatetime: 2025-03-20T10:00:00Z
 ---
 
-I had the chance to dive into the February 2025 issue of *php[architect]*. While I personally found this issue slightly weaker compared to previous editions, it still offered valuable insights and thought-provoking pieces. Here’s my detailed breakdown:
+I had the chance to dive into the February 2025 issue of *PHP Architect*. While I personally found this issue slightly weaker compared to previous editions, it still offered valuable insights and thought-provoking pieces. Here’s my detailed breakdown:
 
 ---
 
