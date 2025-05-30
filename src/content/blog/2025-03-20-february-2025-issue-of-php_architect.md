@@ -1,5 +1,4 @@
 ---
-featured: true
 title: "Review of PHP Architect February 2025"
 description: "An in-depth review of the latest issue of PHP Architect, highlighting key takeaways and recommendations for PHP developers."
 tags: ["php", "developers", "magazine review", "PHP Architect", "Docker", "DDev", "Lando", "Observability", "CMS", "Laravel", "LLM", "OpenTelemetry", "AI", "spotify"]
